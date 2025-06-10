@@ -9,12 +9,12 @@ def analisar_contexto(dados, ativo):
     response = client.classify(
         inputs=[texto],
         examples=[
-            ["mercado em alta", "positivo"],
-            ["subida de preço", "positivo"],
-            ["compra forte", "positivo"],
-            ["mercado em baixa", "negativo"],
-            ["queda de preço", "negativo"],
-            ["venda forte", "negativo"]
+            {"text": "mercado em alta", "label": "positivo"},
+            {"text": "subida de preço", "label": "positivo"},
+            {"text": "compra forte", "label": "positivo"},
+            {"text": "mercado em baixa", "label": "negativo"},
+            {"text": "queda de preço", "label": "negativo"},
+            {"text": "venda forte", "label": "negativo"}
         ]
     )
 
